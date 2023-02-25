@@ -424,6 +424,7 @@ GEM
     net-smtp (0.3.3)
       net-protocol
     net-ssh (7.0.1)
+    newrelic_rpm (9.0.0)
     nio4r (2.5.8)
     nokogiri (1.14.1)
       mini_portile2 (~> 2.8.0)
@@ -822,6 +823,7 @@ DEPENDENCIES
   memory_profiler
   mime-types (~> 3.4.1)
   net-ldap (~> 0.17)
+  newrelic_rpm
   nokogiri (~> 1.14)
   nsa (~> 0.2)
   oj (~> 3.13)
