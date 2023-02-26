@@ -682,6 +682,7 @@ Rails.application.routes.draw do
       resources :media,       only: [:create]
       resources :suggestions, only: [:index]
       resource  :instance,    only: [:show]
+      resources :instance_stats, only: [:show], param: :domain, constraints: { domain: /[^\/]+/ }
       resources :filters,     only: [:index, :create, :show, :update, :destroy] do
         resources :keywords, only: [:index, :create], controller: 'filters/keywords'
         resources :statuses, only: [:index, :create], controller: 'filters/statuses'
