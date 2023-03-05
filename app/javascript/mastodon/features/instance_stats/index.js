@@ -76,7 +76,7 @@ const renderStats = (stats) => {
       },
       y: {
         suggestedMin: 0,
-        suggestedMax: 100,
+        suggestedMax: 20,
       },
     },
   };
