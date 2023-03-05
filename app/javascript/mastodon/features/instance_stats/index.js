@@ -43,7 +43,9 @@ const buildDeliveryStatDatasets = (stats) => {
     return {
       label: series.key,
       data: extractSeries(series.key),
-      pointStyle: false,
+      pointStyle: 'circle',
+      pointRadius: 0,
+      pointHoverRadius: 5,
       tension: 0.1,
       borderColor: series.color,
     };
@@ -53,6 +55,10 @@ const buildDeliveryStatDatasets = (stats) => {
 
 const renderStats = (stats) => {
   const chartOptions = {
+    interaction: {
+      intersect: false,
+      mode: 'index',
+    },
     plugins: {
       legend: {
         position: 'bottom',
@@ -60,6 +66,9 @@ const renderStats = (stats) => {
           usePointStyle: true,
           pointStyle: 'rounded',
         },
+      },
+      tooltip: {
+        position: 'nearest',
       },
     },
     scales: {
