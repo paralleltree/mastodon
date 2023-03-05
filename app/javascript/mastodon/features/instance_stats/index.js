@@ -127,7 +127,7 @@ class InstanceStats extends React.PureComponent {
             <p>{isLoading ? <Skeleton width='10ch' /> : domain}</p>
           </div>
 
-          {isLoading ? null : renderStats(stats)}
+          {isLoading ? null : renderStats(stats.toJS())}
 
         </div>
 
