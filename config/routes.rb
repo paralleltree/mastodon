@@ -677,7 +677,7 @@ Rails.application.routes.draw do
       resources :media,       only: [:create]
       resources :suggestions, only: [:index]
       resource  :instance,    only: [:show]
-      resources :instance_stats, only: [:show], param: :domain
+      resources :instance_stats, only: [:show], param: :domain, constraints: { domain: /[^\/]+/ }
       resources :filters,     only: [:index, :create, :show, :update, :destroy] do
         resources :keywords, only: [:index, :create], controller: 'filters/keywords'
         resources :statuses, only: [:index, :create], controller: 'filters/statuses'
@@ -712,7 +712,7 @@ Rails.application.routes.draw do
   get '/about',      to: 'about#show'
   get '/about/more', to: redirect('/about')
 
-  get '/instance-stats/:domain', to: 'instance_stats#show'
+  get '/instance-stats/:domain', to: 'instance_stats#show', constraints: { domain: /[^\/]+/ }
 
   get '/privacy-policy', to: 'privacy#show', as: :privacy_policy
   get '/terms',          to: redirect('/privacy-policy')
