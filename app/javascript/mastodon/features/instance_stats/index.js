@@ -35,7 +35,7 @@ const buildDeliveryStatDatasets = (stats) => {
       color: '#36A2EB',
     },
     {
-      key: 'fail',
+      key: 'failure',
       color: '#FF6384',
     },
   ];
