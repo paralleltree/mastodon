@@ -18,6 +18,7 @@ import mutes from './mutes';
 import blocks from './blocks';
 import boosts from './boosts';
 import server from './server';
+import instance_stats from './instance_stats';
 import contexts from './contexts';
 import compose from './compose';
 import search from './search';
@@ -64,6 +65,7 @@ const reducers = {
   blocks,
   boosts,
   server,
+  instance_stats,
   contexts,
   compose,
   search,
