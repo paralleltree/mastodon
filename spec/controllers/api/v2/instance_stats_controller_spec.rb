@@ -4,6 +4,7 @@ require 'rails_helper'
 
 RSpec.describe Api::V2::InstanceStatsController do
   render_views
+  # test
 
   let(:domain) { 'example.com' }
 
